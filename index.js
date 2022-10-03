@@ -4,8 +4,11 @@ var Output=document.querySelector('#output');
 
 showButton.addEventListener('click',clickHandler)
 function clickHandler(e){
+   
     var bdayStr=birthDate.value;
-
+    if(bdayStr==""){
+        Output.innerText= "Enter a valid date";
+    }
     if(bdayStr!==''){
         var listofDates=bdayStr.split('-');
         var date={
